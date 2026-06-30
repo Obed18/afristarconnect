@@ -31,7 +31,7 @@
   font-family: "Unbounded", sans-serif !important;
 }
 .logo-img {
-  height: 60px;
+  height: 80px;
 }
 .logo-text {
   font-weight: 700;
@@ -292,9 +292,24 @@
     margin-top: 1rem;
   }
   .logo-img {
-    height: 26px;
+    height: 60px;
   }
+.courier-links {
+    flex-direction: column;
 }
+    .mobile-footer-bottom {
+        position: absolute;
+        bottom: 21px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 2px;
+        text-align: center;
+        gap: 1rem;
+        color: rgb(197, 196, 196);
+    }
+  }
 
 .courier-links {
   display: flex;

@@ -9,7 +9,7 @@ const FocusAreas: React.FC = () => {
       description:
         "IoT-driven irrigation cutting water use 40% for 12,000 farmers.",
       image:
-        "https://d64gsuwffb70l.cloudfront.net/6a3eafb177207d3a19bc987c_1782493261241_c07a3031.png",
+        "https://plus.unsplash.com/premium_photo-1681398556150-7fa0d1e72703?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       color: "green-emerald",
     },
     {
@@ -18,16 +18,15 @@ const FocusAreas: React.FC = () => {
       description:
         "Connecting 240 rural clinics to specialists via low-bandwidth video.",
       image:
-        "https://d64gsuwffb70l.cloudfront.net/6a3eafb177207d3a19bc987c_1782493266898_c334f80b.png",
+        "https://images.unsplash.com/photo-1573164574397-dd250bc8a598?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       color: "blue-teal",
     },
     {
-      icon: GraduationCap,
       title: "Nairobi Accelerator",
       description:
-        "Training programs, workshops, bootcamps, and mentorship for youth and professionals in coding, AI, and emerging technologies, with educational platforms and tools.",
+        "Bringing clean power to 80,000 off-grid homes.",
       image:
-        "https://d64gsuwffb70l.cloudfront.net/6a3eafb177207d3a19bc987c_1782493249932_5787b7b1.jpg",
+        "https://plus.unsplash.com/premium_photo-1663956003409-80ab380dad22?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       color: "yellow-orange",
     },
   ];

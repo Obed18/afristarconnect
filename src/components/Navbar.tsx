@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef, MouseEvent } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const menuVariants: Variants = {
@@ -20,6 +20,7 @@ const sidebarVariants: Variants = {
 };
 
 export default function Navbar() {
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null); // "ventures" | "about" | null
@@ -67,33 +68,35 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const navItems = [
-    { path: "/", label: "Opportunities" },
-    { path: "/about", label: "How it works" },
-    { path: "/services", label: "Industries", isParent: true },
+    { path: "/#opportunities", label: "Opportunities" },
+    { path: "/#how-it-works", label: "How it works" },
+    { path: "/#industries", label: "Industries" },
     // { path: "/portfolio", label: "Portfolio" },
     // { path: "/partner", label: "Partner" },
     // { path: "/blog", label: "Blog", isParent: true },
-    { path: "/contact", label: "Contact" },
+    { path: "/#contact", label: "Contact" },
   ];
 
-  // Helper function to check if a link is active (handles nested routes)
-  const isLinkActive = (itemPath: string, isParent?: boolean): boolean => {
-    if (isParent) {
-      // For parent routes, match if pathname starts with the path
-      return location.pathname.startsWith(itemPath);
+  // Helper function to check if a link is active
+  const isLinkActive = (itemPath: string): boolean => {
+    const [pathname, hash = ""] = itemPath.split("#");
+
+    if (hash) {
+      return location.pathname === pathname && location.hash === `#${hash}`;
     }
-    // For other routes, do exact match
+
     return location.pathname === itemPath;
   };
 
-  const navLinks = (
+  const navLinks = (onClick?: () => void) => (
     <ul className="courier-links">
       {navItems.map((item, index) => (
         <li key={index}>
           <NavLink
             to={item.path}
+            onClick={onClick}
             className={({ isActive }) =>
-              isActive || isLinkActive(item.path, item.isParent)
+              isActive || isLinkActive(item.path)
                 ? "link-text active-link"
                 : "link-text"
             }
@@ -101,7 +104,7 @@ export default function Navbar() {
             {item.label}
 
             {/* Sleek Animated Indicator */}
-            {isLinkActive(item.path, item.isParent) && (
+            {!onClick && isLinkActive(item.path) && (
               <motion.span
                 layoutId="activeIndicator"
                 className="active-indicator"
@@ -131,7 +134,7 @@ export default function Navbar() {
             <img src="/afristar-text.png" className="logo-img" alt="Logo" />
           </div>
         </div>
-        <div className="nav-links">{navLinks}</div>
+        <div className="nav-links">{navLinks()}</div>
         <div className="nav-buttons">
           <Link to="/register">
             <button className="button-outline">Sign in</button>
@@ -167,36 +170,9 @@ export default function Navbar() {
               ref={sidebarRef}
             >
               <X className="sidebar-close-icon" onClick={toggleMenu} />
-              <ul>
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/about">About</a>
-                </li>
-                <li>
-                  <a href="/services">Services</a>
-                </li>
-                <li>
-                  <a href="/portfolio">Portfolio</a>
-                </li>
-                <li>
-                  <a href="/portfolio">Portfolio</a>
-                </li>
-                <li>
-                  <a href="/partner">Partner</a>
-                </li>
-                <li>
-                  <a href="/blog">Blog</a>
-                </li>
-                <li>
-                  <a href="/contact" onClick={toggleMenu}>
-                    Contact
-                  </a>
-                </li>
-              </ul>
+              {navLinks(toggleMenu)}
               <motion.div
-                className="footer-bottom"
+                className="mobile-footer-bottom"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
@@ -209,7 +185,7 @@ export default function Navbar() {
                     <button className="button-filled">Get Started</button>
                   </Link>
                 </div>
-                <p>© 2026 AfriStar Connect. All rights reserved.</p>
+                <p>© 2026 AfriStar Connect.</p>
               </motion.div>
             </motion.div>
           </>
