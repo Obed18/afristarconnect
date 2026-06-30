@@ -1,0 +1,181 @@
+/* General section */
+.focus-section {
+  padding: 5rem 1rem;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.focus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* Header */
+.focus-header {
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.focus-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  color: #20e58f;
+}
+
+.focus-subtitle {
+  font-size: 1.125rem;
+  color: #b2b9c4;
+  text-align: left;
+}
+
+/* Grid layout */
+.focus-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .focus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.focus-card {
+  overflow: hidden;
+}
+
+.focus-content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.focus-image-wrapper {
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.focus-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.focus-card:hover .focus-image {
+  transform: scale(1.1);
+}
+
+.focus-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  transition: opacity 0.4s ease;
+}
+
+.focus-card:hover .focus-overlay {
+  opacity: 0.3;
+}
+
+/* Gradient colors
+.blue-teal {
+  background: linear-gradient(to bottom right, #3b82f6, #14b8a6);
+}
+
+.green-emerald {
+  background: linear-gradient(to bottom right, #22c55e, #059669);
+}
+
+.yellow-orange {
+  background: linear-gradient(to bottom right, #facc15, #f97316);
+} */
+
+/* Card content */
+.focus-content {
+  padding: 1.5rem;
+  text-align: left;
+  background-color: #1f2a46;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  border-radius: 1rem;
+}
+
+.focus-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.focus-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+/* Text */
+.focus-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.focus-card-desc {
+  font-size: 0.95rem;
+  color: #a6b8d3;
+  margin-bottom: 1.25rem;
+}
+
+/* Button */
+.focus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #20e58f;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: gap 0.3s ease;
+}
+
+.focus-btn:hover {
+  gap: 0.75rem;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}

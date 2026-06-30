@@ -1,0 +1,180 @@
+.login-card {
+  width: 100%;
+
+  max-width: 700px;
+}
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.logo-circle {
+  width: 54px;
+
+  height: 54px;
+
+  border-radius: 50%;
+
+  display: grid;
+
+  place-items: center;
+
+  background: #fff;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.brand h3 {
+  font-size: 2rem;
+  color: #d8e1ec;
+
+  font-weight: 800;
+}
+
+.brand span {
+  color: #912929;
+}
+
+.login-card h1 {
+  font-size: 2rem;
+
+  text-align: center;
+
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.login-card p {
+  text-align: center;
+
+  margin-bottom: 45px;
+
+  color: #ababab;
+}
+
+.input {
+  margin-bottom: 25px;
+}
+
+.input label {
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.input input {
+  width: 100%;
+
+  height: 58px;
+
+  padding: 0 18px;
+
+  border: 1px solid #626b97;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.input input:focus {
+  outline: none;
+
+  border-color: #20e58f;
+
+  box-shadow: 0 0 0 2px #20e5904f;
+}
+
+.password {
+  position: relative;
+}
+
+.password svg {
+  position: absolute;
+
+  right: 18px;
+
+  top: 20px;
+
+  cursor: pointer;
+}
+
+.forgot {
+  text-align: right;
+
+  color: #20e58f;
+
+  margin-bottom: 25px;
+
+  cursor: pointer;
+}
+
+.Sign-in {
+  width: 100%;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #20e58f;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+.Sign-in:hover {
+  background: #912929;
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.bottom {
+  margin-top: 28px;
+  color: #fff;
+  text-align: center;
+}
+
+.bottom span {
+  color: #20e58f;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  .login-card h1 {
+    font-size: 2.3rem;
+  }
+
+  .brand h3 {
+    font-size: 1.6rem;
+  }
+}

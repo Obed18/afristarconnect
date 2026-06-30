@@ -1,0 +1,150 @@
+.founder-hero {
+  padding: 80px 20px;
+  background: #071320;
+  display: flex;
+  justify-content: center;
+}
+
+.founder-container {
+  width: 100%;
+  max-width: 1200px;
+  background: radial-gradient(
+      circle at top,
+      rgba(92, 102, 255, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #1b2557 0%, #1a2355 30%, #17214f 65%, #131d45 100%);
+  border-radius: 28px;
+  padding: 60px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.founder-image{
+  height: 400px;
+}
+.founder-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  margin-top: 20px;
+}
+/* LEFT CONTENT */
+.founder-left {
+  max-width: 520px;
+}
+
+.founder-left h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.founder-left p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.founder-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: #16283b;
+  color: #20e58f;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #f2ead3;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* FLOATING CARD */
+.floating-card {
+  position: absolute;
+  right: 40px;
+  bottom: -30px;
+  width: 280px;
+  background: #1f2a46;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tag {
+  color: #20e58f;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.floating-card h3 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #ffffff;
+}
+
+.floating-card p {
+  font-size: 13px;
+  color: #b4b1b1;
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .founder-container {
+    padding: 40px;
+  }
+
+  .floating-card {
+    position: static;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .founder-left h1 {
+    font-size: 30px;
+  }
+
+  .founder-container {
+    padding: 30px 20px;
+  }
+}
